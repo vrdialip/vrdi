@@ -6,19 +6,19 @@ const projects = [
     title: "Simple CRUD App",
     subtitle: "Web Development",
     desc: "A simple CRUD application built with PHP & MySQL to manage data (create, read, update, delete) with a clean and functional interface.",
-    img: "./public/crud.png", // contoh gambar
+    img: "./crud.png", // contoh gambar
   },
   {
     title: "Dimsum Ordering App",
     subtitle: "Frontend Dev",
     desc: "Svarga Web App – Team project for IT’Day 2025 to support MSMEs. Frontend Developer role, achieved Top 5 & certified.",
-    img: "./public/svarga.png",
+    img: "./svarga.png",
   },
   {
     title: "Portfolio Website",
     subtitle: "Web Development",
     desc: "A simple responsive website built with React and Vite to showcase clean design and usability.",
-    img: "./public/porto.png",
+    img: "./porto.png",
   },
 ];
 
