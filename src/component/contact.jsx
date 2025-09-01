@@ -1,5 +1,5 @@
 import React from "react";
-import "./Contact.css";
+import "./contact.css";
 import { Instagram, Github, MapPin, Globe, MessageCircle } from "lucide-react";
 
 const contacts = [
