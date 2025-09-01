@@ -94,7 +94,7 @@ createRoot(document.getElementById('root')).render(
     display: "flex",
     justifyContent: "center",   // horizontal center
     alignItems: "center",       // vertical center (kalau perlu)
-    width: "100vw",              // penuh lebar
+    width: "100%",              // penuh lebar
     maxWidth: "1200px",         // batas maksimal biar nggak terlalu lebar
     margin: "0 auto",           // biar tetap ke tengah
     padding: "20px"             // kasih jarak biar nggak mepet
