@@ -43,7 +43,6 @@ const items = [
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-<<<<<<< HEAD
     <div className="bg-layer">
       {/* Background Particles */}
       <div style={{ 
@@ -67,7 +66,6 @@ createRoot(document.getElementById('root')).render(
       </div>
     </div>
 
-=======
     <div style={{ position: 'fixed', bottom: 0, left: 0, width: '100vw', zIndex: 9999 }}>
       <Dock 
         items={items}
@@ -89,7 +87,6 @@ createRoot(document.getElementById('root')).render(
       disableRotation={false}
     />
   </div>
->>>>>>> 7c77d9fbe26490023fbc49546dad1a7a8a1af17e
 
     <div className="content-layer">
         {/* Floating Dock */}
@@ -111,7 +108,6 @@ createRoot(document.getElementById('root')).render(
         <Page />
       </motion.div>
 
-<<<<<<< HEAD
       {/* ✅ About Section */}
       <motion.div
         id="about"
@@ -130,26 +126,6 @@ createRoot(document.getElementById('root')).render(
       >
         <About />
       </motion.div>
-=======
-  <motion.div
-  initial={{ opacity: 0, x: 50 }}
-  whileInView={{ opacity: 1, x: 0 }}
-  viewport={{ once: true }}
-  transition={{ duration: 2 }}
-  style={{
-    display: "flex",
-    justifyContent: "center",   // horizontal center
-    alignItems: "center",       // vertical center (kalau perlu)
-    width: "100vw",              // penuh lebar
-    maxWidth: "1200px",         // batas maksimal biar nggak terlalu lebar
-    margin: "0 auto",           // biar tetap ke tengah
-    padding: "20px"             // kasih jarak biar nggak mepet
-  }}
->
-  <Skills />
-</motion.div>
-
->>>>>>> 7c77d9fbe26490023fbc49546dad1a7a8a1af17e
 
       {/* Skills Section */}
       <motion.div
@@ -181,7 +157,6 @@ createRoot(document.getElementById('root')).render(
         <Projects />
       </motion.div>
 
-<<<<<<< HEAD
       {/* Contact */}
       <motion.div
         id="contact"
@@ -205,16 +180,4 @@ createRoot(document.getElementById('root')).render(
       </motion.div>
     </div>
   </StrictMode>,
-=======
-  <motion.div
-    initial={{ opacity: 0 }}
-    whileInView={{ opacity: 1 }}
-    viewport={{ once: true }}
-    transition={{ duration: 2 }}
-    style={{ width: '100vw', margin: 0 }}
-  >
-    <Copyright />
-  </motion.div>
-</StrictMode>,
->>>>>>> 7c77d9fbe26490023fbc49546dad1a7a8a1af17e
 )
