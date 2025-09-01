@@ -45,7 +45,7 @@ const items = [
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <div style={{ position: 'fixed', bottom: 0, left: 0, width: '100%', zIndex: 9999 }}>
+    <div style={{ position: 'fixed', bottom: 0, left: 0, width: '100vw', zIndex: 9999 }}>
       <Dock 
         items={items}
         panelHeight={90}
@@ -54,7 +54,7 @@ createRoot(document.getElementById('root')).render(
       />
     </div>
 
-  <div style={{ width: '100%', height: '600px', position: 'fixed' }}>
+  <div style={{ width: '100vw', height: '600px', position: 'fixed' }}>
     <Particles
       particleColors={['#ffffff', '#ffffff']}
       particleCount={200}
@@ -80,7 +80,7 @@ createRoot(document.getElementById('root')).render(
     whileInView={{ opacity: 1, x: 0 }}
     viewport={{ once: true }}
     transition={{ duration: 2 }}
-    style={{ width: '100%', margin: 'auto' }}
+    style={{ width: '100vw', margin: 'auto' }}
   >
     <About />
   </motion.div>
@@ -94,7 +94,7 @@ createRoot(document.getElementById('root')).render(
     display: "flex",
     justifyContent: "center",   // horizontal center
     alignItems: "center",       // vertical center (kalau perlu)
-    width: "100%",              // penuh lebar
+    width: "100vw",              // penuh lebar
     maxWidth: "1200px",         // batas maksimal biar nggak terlalu lebar
     margin: "0 auto",           // biar tetap ke tengah
     padding: "20px"             // kasih jarak biar nggak mepet
@@ -127,7 +127,7 @@ createRoot(document.getElementById('root')).render(
     whileInView={{ opacity: 1 }}
     viewport={{ once: true }}
     transition={{ duration: 2 }}
-    style={{ width: '100%', margin: 0 }}
+    style={{ width: '100vw', margin: 0 }}
   >
     <Copyright />
   </motion.div>
