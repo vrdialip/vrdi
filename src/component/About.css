@@ -1,0 +1,145 @@
+.about-section {
+  border-radius: 20px;
+  padding: 50px 20px;
+  position: relative;
+  font-family: "Futura", sans-serif;
+}
+
+.content h3 {
+  font-family: "Astro", sans-serif;
+  font-size: 20px;
+}
+
+.about-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 50px;
+  color: #FEE715; /* vivid yellow */
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-family: "Space", sans-serif;
+}
+
+.timeline {
+  position: relative;
+  max-width: 900px;
+  margin: auto;
+  padding: 20px 0;
+}
+
+.timeline::after {
+  content: "";
+  position: absolute;
+  width: 3px;
+  background: linear-gradient(180deg, #FEE715, transparent); /* glowing effect */
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 5px;
+}
+
+.timeline-container {
+  padding: 20px 40px;
+  position: relative;
+  width: 50%;
+}
+
+.timeline-container.left {
+  left: 0;
+}
+
+.timeline-container.right {
+  left: 50%;
+}
+
+.timeline-container .content {
+  background: rgba(16, 24, 32, 0.4); /* semi transparan */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 25px 30px;
+  border-radius: 20px;
+  position: relative;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-container .content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.5);
+}
+
+.timeline-container .content h3 {
+  margin: 0 0 12px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #FEE715;
+  letter-spacing: 0.5px;
+}
+
+.timeline-container .content p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* Bulatan di timeline */
+.timeline-container::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  right: -9px;
+  background-color: #FEE715;
+  border-radius: 50%;
+  top: 25px;
+  z-index: 1;
+  box-shadow: 0 0 10px #FEE715; /* glow effect */
+}
+
+.timeline-container.right::before {
+  left: -9px;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .timeline-container {
+    width: 50vh;
+  }
+    .content h3 {
+    font-size: 1rem;
+    }
+  .timeline::after {
+    left: 25px;
+  }
+
+  .timeline-container {
+    width: 100%;
+    padding-left: 60px;
+    padding-right: 25px;
+  }
+
+  .timeline-container.right {
+    left: 0;
+  }
+
+  .timeline-container::before {
+    left: 15px;
+  }
+
+  .timeline-container.right::before {
+    left: 18px;
+  }
+
+  /* Font lebih kecil untuk paragraf di mobile */
+  .timeline-container .content p {
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+
+  /* Optional: judul juga bisa dikecilin */
+  .timeline-container .content h3 {
+    font-size: 1.1rem;
+  }
+}

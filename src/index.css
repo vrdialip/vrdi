@@ -1,0 +1,39 @@
+/* Reset margin & padding bawaan */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  /* background: linear-gradient(135deg, #000000, #1a1a1a, #333333, #4b4b4b); */
+  background-color: black;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: "Space";
+  src: url("./src/assets/font/Space.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Astro";
+  src: url("./src/assets/font/Astro.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Futura";
+  src: url("./src/assets/font/Futura.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
