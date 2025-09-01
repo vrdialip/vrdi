@@ -86,14 +86,23 @@ createRoot(document.getElementById('root')).render(
   </motion.div>
 
   <motion.div
-    initial={{ opacity: 0, x: 50 }}
-    whileInView={{ opacity: 1, x: 0 }}
-    viewport={{ once: true }}
-    transition={{ duration: 2 }}
-    style={{ width: '75%', margin: 'auto' }}
-  >
-    <Skills />
-  </motion.div>
+  initial={{ opacity: 0, x: 50 }}
+  whileInView={{ opacity: 1, x: 0 }}
+  viewport={{ once: true }}
+  transition={{ duration: 2 }}
+  style={{
+    display: "flex",
+    justifyContent: "center",   // horizontal center
+    alignItems: "center",       // vertical center (kalau perlu)
+    width: "100%",              // penuh lebar
+    maxWidth: "1200px",         // batas maksimal biar nggak terlalu lebar
+    margin: "0 auto",           // biar tetap ke tengah
+    padding: "20px"             // kasih jarak biar nggak mepet
+  }}
+>
+  <Skills />
+</motion.div>
+
 
   <motion.div
     initial={{ opacity: 0, y: 50 }}
