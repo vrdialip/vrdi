@@ -3,14 +3,15 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
 }
 
 html, body {
   width: 100%;
   height: 100%;
   font-family: Arial, sans-serif;
-  /* background: linear-gradient(135deg, #000000, #1a1a1a, #333333, #4b4b4b); */
   background-color: black;
+  overflow-x: hidden; /* cegah geser ke samping */
 }
 
 html {
@@ -36,4 +37,18 @@ html {
   src: url("./src/assets/font/Futura.otf") format("truetype");
   font-weight: normal;
   font-style: normal;
+}
+
+.bg-layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.content-layer {
+  position: relative;
+  z-index: 1;
 }

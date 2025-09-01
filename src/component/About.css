@@ -1,145 +1,190 @@
 .about-section {
-  border-radius: 20px;
-  padding: 50px 20px;
-  position: relative;
-  font-family: "Futura", sans-serif;
-}
-
-.content h3 {
-  font-family: "Astro", sans-serif;
-  font-size: 20px;
+  padding: 4rem 1rem;
+  text-align: center;
+  background: transparent; /* bg section dihapus */
+  color: white;
 }
 
 .about-title {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 50px;
-  color: #FEE715; /* vivid yellow */
-  font-weight: 700;
-  letter-spacing: 1px;
-  font-family: "Space", sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  font-weight: bold;
+  font-family: 'Space', sans-serif;
+    color: #ffdf00; /* vivid yellow */  
 }
 
-.timeline {
-  position: relative;
-  max-width: 900px;
-  margin: auto;
-  padding: 20px 0;
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  justify-items: center;
 }
 
-.timeline::after {
-  content: "";
-  position: absolute;
-  width: 3px;
-  background: linear-gradient(180deg, #FEE715, transparent); /* glowing effect */
+
+/* Kotak Icon Style */
+.about-card {
+  background: rgba(255, 223, 0, 0.1); vivid yellow transparan blur
+  padding: 2rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 223, 0, 0.9); /* border vivid yellow */
+  box-shadow: 0 0 20px rgba(255, 223, 0, 0.4); /* efek glow */
+  backdrop-filter: blur(8px); /* efek kaca */
+  width: 120px;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.about-card:hover {
+  transform: translateY(-6px) scale(1.05);
+  box-shadow: 0 0 30px rgba(255, 223, 0, 0.8); /* glow lebih terang saat hover */
+}
+
+.about-card p {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #fff;
+}
+
+/* Popup Style */
+.popup-overlay {
+  position: fixed;
   top: 0;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  border-radius: 5px;
-}
-
-.timeline-container {
-  padding: 20px 40px;
-  position: relative;
-  width: 50%;
-}
-
-.timeline-container.left {
   left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  padding: 1rem;
 }
 
-.timeline-container.right {
-  left: 50%;
-}
-
-.timeline-container .content {
-  background: rgba(16, 24, 32, 0.4); /* semi transparan */
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  padding: 25px 30px;
-  border-radius: 20px;
+.popup-box {
+  background: rgba(20, 20, 30, 0.5); /* dark glass effect */
+  padding: 2rem;
+  border-radius: 1rem;
+  max-width: 450px;
+  width: 100%;
+  color: white;
   position: relative;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  border: 1px solid rgba(255, 223, 0, 0.8); /* vivid yellow border */
+  box-shadow: 0 0 25px rgba(255, 223, 0, 0.4);
+  backdrop-filter: blur(15px); /* efek blur */
+  animation: fadeIn 0.3s ease;
 }
 
-.timeline-container .content:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.5);
+.popup-box h3 {
+  margin-bottom: 1rem;
+  font-size: 20px;
+  color: #ffdf00; /* vivid yellow */
+  font-family: 'Astro', sans-serif;
 }
 
-.timeline-container .content h3 {
-  margin: 0 0 12px;
-  font-size: 1.4rem;
+.popup-box p {
+  font-family: 'Futura', sans-serif;
+  margin-bottom: 1rem;
+}
+
+.popup-img {
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid rgba(255, 223, 0, 0.6);
+}
+
+/* Subtitle di popup */
+.popup-subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: #ffdf00; /* vivid yellow */
   font-weight: 600;
-  color: #FEE715;
-  letter-spacing: 0.5px;
 }
 
-.timeline-container .content p {
-  margin: 0;
-  font-size: 1rem;
-  line-height: 1.6;
-  color: rgba(255, 255, 255, 0.85);
-}
-
-/* Bulatan di timeline */
-.timeline-container::before {
-  content: "";
+.popup-close {
   position: absolute;
-  width: 16px;
-  height: 16px;
-  right: -9px;
-  background-color: #FEE715;
-  border-radius: 50%;
-  top: 25px;
-  z-index: 1;
-  box-shadow: 0 0 10px #FEE715; /* glow effect */
+  top: 10px;
+  right: 15px;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: white;
 }
 
-.timeline-container.right::before {
-  left: -9px;
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
 }
 
-/* Responsive */
-@media screen and (max-width: 768px) {
-  .timeline-container {
-    width: 50vh;
+/* Responsive Tablet */
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: repeat(3, 1fr); /* tetap 3 sejajar */
+    gap: 1rem;
   }
-    .content h3 {
+
+  .about-card {
+    width: 90px;
+    height: 90px;
+    padding: 0.8rem;
+  }
+
+  .about-card p {
+    font-size: 0.75rem;
+  }
+
+  .popup-box {
+    max-width: 350px; /* popup sedang */
+    padding: 1.5rem;
+  }
+
+  .popup-box h3 {
+    font-size: 18px;
+  }
+
+  .popup-subtitle {
     font-size: 1rem;
-    }
-  .timeline::after {
-    left: 25px;
+  }
+}
+
+/* Responsive Mobile */
+@media (max-width: 480px) {
+  .about-grid {
+    grid-template-columns: repeat(3, 1fr); /* tetap 3 icon sejajar */
+    gap: 0.8rem;
   }
 
-  .timeline-container {
-    width: 100%;
-    padding-left: 60px;
-    padding-right: 25px;
+  .about-card {
+    width: 80px;
+    height: 80px;
+    padding: 0.6rem;
   }
 
-  .timeline-container.right {
-    left: 0;
+  .about-card p {
+    font-size: 0.7rem;
   }
 
-  .timeline-container::before {
-    left: 15px;
+  .popup-box {
+    max-width: 280px; /* popup lebih kecil */
+    padding: 1rem;
   }
 
-  .timeline-container.right::before {
-    left: 18px;
+  .popup-box h3 {
+    font-size: 16px;
   }
 
-  /* Font lebih kecil untuk paragraf di mobile */
-  .timeline-container .content p {
-    font-size: 0.85rem;
-    line-height: 1.4;
-  }
-
-  /* Optional: judul juga bisa dikecilin */
-  .timeline-container .content h3 {
-    font-size: 1.1rem;
+  .popup-subtitle {
+    font-size: 0.9rem;
   }
 }

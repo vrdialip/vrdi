@@ -1,45 +1,95 @@
-import React from "react";
+// About.jsx
+import React, { useState } from "react";
 import "./About.css";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import { Users, Award, BookOpen } from "lucide-react";
 
 const About = () => {
-  React.useEffect(() => {
-    AOS.init({ duration: 1000 });
-  }, []);
+  const [activePopup, setActivePopup] = useState(null);
+
+  const handleOpen = (type) => {
+    setActivePopup(type);
+  };
+
+  const handleClose = () => {
+    setActivePopup(null);
+  };
 
   return (
     <section id="about" className="about-section">
       <h2 className="about-title">About</h2>
-      <div className="timeline">
-        
-        {/* Left side */}
-        <div className="timeline-container left" data-aos="fade-right">
-          <div className="content">
-            <h3>👥 My Team</h3>
-            <p>I am part of <b>LocalGrow</b>, a small developer team from SMK Yaj Depok. Together, we focus on creating modern websites and digital solutions to support local businesses. With strong collaboration and creativity, our team has gained experience through real projects and national competitions.</p>
-          </div>
+      <div className="about-grid">
+        <div className="about-card" onClick={() => handleOpen("team")}>
+          <Users size={32} />
+          <p>My Team</p>
         </div>
-
-        {/* Right side */}
-        <div className="timeline-container right" data-aos="fade-left">
-          <div className="content">
-            <h3>🏆 Top Achievement</h3>
-            <p>5th Place in National UMKM Website Competition – It's Day
-Achieved Top 5 in the It's Day national UMKM website competition with my team, focusing on user-friendly design, optimized UI/UX, and digital solutions for small businesses. This experience enhanced my teamwork, problem-solving, and modern web development skills.</p>
-          </div>
+        <div className="about-card" onClick={() => handleOpen("education")}>
+          <BookOpen size={32} />
+          <p>Education</p>
         </div>
-
-        {/* Left side */}
-        <div className="timeline-container left" data-aos="fade-right">
-          <div className="content">
-            <h3>🎓 Education</h3>
-            <p><b>SMK YAJ Depok</b>
-Currently pursuing vocational education at SMK YAJ Depok, focusing on Information and Communication Technology. Gaining knowledge and practical experience in web development, programming, and digital design as preparation for a career in the tech industry.</p>
-          </div>
+        <div className="about-card" onClick={() => handleOpen("achievement")}>
+          <Award size={32} />
+          <p>Top Achievement</p>
         </div>
-
       </div>
+
+      {/* Popup */}
+      {activePopup && (
+        <div className="popup-overlay" onClick={handleClose}>
+          <div
+            className="popup-box"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button className="popup-close" onClick={handleClose}>
+              ✕
+            </button>
+
+            {activePopup === "team" && (
+              <div>
+                <img
+                  src="./team2.jpg"
+                  alt="Team"
+                  className="popup-img"
+                />
+                <h3>My Team</h3>
+                <p>
+                  We are a small development team from SMK YAJ Depok, passionate about
+                  building innovative and creative digital solutions together.
+                </p>
+              </div>
+            )}
+
+            {activePopup === "education" && (
+              <div>
+                <img
+                  src="./yaj.jpg"
+                  alt="Education"
+                  className="popup-img"
+                />
+                <h3>Education</h3>
+                <p>
+                  I am currently a student at SMK YAJ Depok, continuously learning
+                  and growing my skills in software and web development.
+                </p>
+              </div>
+            )}
+
+            {activePopup === "achievement" && (
+              <div>
+                <img
+                  src="./sertifikat.jpg"
+                  alt="Achievement"
+                  className="popup-img"
+                />
+                <h3>Top Achievement</h3>
+                <p>
+                  I was honored to be in the Top 5 of the National UMKM Website
+                  Competition ITS Day 2025 with my amazing team.
+                </p>
+              </div>
+            )}
+          </div>
+        </div>
+      )}
     </section>
   );
 };

@@ -10,7 +10,7 @@ export default function Hero() {
           <h1 className="title">
             Hi, I'm <span>Verdi</span>
           </h1>
-          <h2 className="subtitle">Junior Frontend Developer , Passionate about <br /> UI / UX</h2>
+          <h2 className="subtitle">Junior Frontend Developer , Passionate about UI /UX</h2>
           <p className="desc">
             "This website was built with AI assistance while learning React and Vite, combining hands-on practice with smart guidance on components, styling, and modern animations."
           </p>
