@@ -80,7 +80,7 @@ createRoot(document.getElementById('root')).render(
     whileInView={{ opacity: 1, x: 0 }}
     viewport={{ once: true }}
     transition={{ duration: 2 }}
-    style={{ width: '100vw', margin: 'auto' }}
+    style={{ width: '100%', margin: 'auto' }}
   >
     <About />
   </motion.div>
@@ -94,7 +94,7 @@ createRoot(document.getElementById('root')).render(
     display: "flex",
     justifyContent: "center",   // horizontal center
     alignItems: "center",       // vertical center (kalau perlu)
-    width: "100%",              // penuh lebar
+    width: "100vw",              // penuh lebar
     maxWidth: "1200px",         // batas maksimal biar nggak terlalu lebar
     margin: "0 auto",           // biar tetap ke tengah
     padding: "20px"             // kasih jarak biar nggak mepet
