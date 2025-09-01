@@ -24,7 +24,7 @@ export default function Hero() {
         <div className="image-side scale-in">
           <div className="decor-shape shape1"></div>
           <div className="decor-shape shape2"></div>
-          <img src="./public/karikatur-verdi.png" alt="Verdi" className="profile-img" />
+          <img src="./karikatur-verdi.png" alt="Verdi" className="profile-img" />
         </div>
       </div>
     </section>
