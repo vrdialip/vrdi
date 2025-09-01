@@ -26,7 +26,7 @@ const items = [
   },
   {
     icon: <VscSettingsGear size={24} color="#FFDD33" />,
-    label: 'skills',
+    label: 'Skills',
     onClick: () => document.getElementById('skills')?.scrollIntoView({ behavior: 'smooth' })
   },
   {
