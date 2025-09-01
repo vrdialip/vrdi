@@ -3,7 +3,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+<<<<<<< HEAD
 
+=======
+   box-sizing: border-box;
+>>>>>>> 7c77d9fbe26490023fbc49546dad1a7a8a1af17e
 }
 
 html, body {
@@ -11,6 +15,7 @@ html, body {
   height: 100%;
   font-family: Arial, sans-serif;
   background-color: black;
+  width: 100%;
   overflow-x: hidden; /* cegah geser ke samping */
 }
 
