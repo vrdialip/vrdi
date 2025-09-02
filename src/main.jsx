@@ -4,6 +4,7 @@ import './index.css'
 import App from './App.jsx'
 import Particles from '../ReactBits/Particles/Particles.jsx'
 import Page from './component/page.jsx'
+import Skil from './component/skills.jsx'
 import About from "./component/About"; 
 import Projects from './component/project.jsx'
 import Contact from './component/contact.jsx'
@@ -94,6 +95,7 @@ createRoot(document.getElementById('root')).render(
         <Page />
       </motion.div>
 
+
       {/* ✅ About Section */}
       <motion.div
         id="about"
@@ -113,7 +115,9 @@ createRoot(document.getElementById('root')).render(
         <About />
       </motion.div>
 
-      
+      <div>
+        <Skil />
+      </div>
 
       {/* Projects */}
       <motion.div
