@@ -4,8 +4,7 @@ import './index.css'
 import App from './App.jsx'
 import Particles from '../ReactBits/Particles/Particles.jsx'
 import Page from './component/page.jsx'
-import About from "./component/About";   // ✅ bagian About kita
-import Skills from './component/skills.jsx'
+import About from "./component/About"; 
 import Projects from './component/project.jsx'
 import Contact from './component/contact.jsx'
 import Copyright from './component/copyright.jsx'
@@ -75,19 +74,6 @@ createRoot(document.getElementById('root')).render(
       />
     </div>
 
-  <div style={{ width: '100vw', height: '600px', position: 'fixed' }}>
-    <Particles
-      particleColors={['#ffffff', '#ffffff']}
-      particleCount={200}
-      particleSpread={10}
-      speed={0.1}
-      particleBaseSize={100}
-      moveParticlesOnHover={true}
-      alphaParticles={false}
-      disableRotation={false}
-    />
-  </div>
-
     <div className="content-layer">
         {/* Floating Dock */}
       <div style={{ position: 'fixed', bottom: 0, left: 0, width: '100%', zIndex: 9999 }}>
@@ -127,24 +113,7 @@ createRoot(document.getElementById('root')).render(
         <About />
       </motion.div>
 
-      {/* Skills Section */}
-      <motion.div
-        id="skills"
-        initial={{ opacity: 0, x: 50 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 2 }}
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          width: "100vw",
-          maxWidth: "1200px",
-          margin: "auto",
-          padding: "40px 20px"
-        }}
-      >
-        <Skills />
-      </motion.div>
+      
 
       {/* Projects */}
       <motion.div
