@@ -37,7 +37,7 @@ const items = [
   {
     icon: <VscArchive size={24} color="#FFDD33" />,
     label: 'Contact',
-    onClick: () => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
+    onClick: () => document.getElementById('contacts')?.scrollIntoView({ behavior: 'smooth' })
   }
 ]
 
