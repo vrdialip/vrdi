@@ -9,7 +9,7 @@ import About from "./component/About";
 import Projects from './component/project.jsx'
 import Contact from './component/contact.jsx'
 import Copyright from './component/copyright.jsx'
-import { motion } from "framer-motion"
+// import { motion } from "framer-motion"
 import Dock from '../ReactBits/Dock/Dock.jsx'
 import { VscHome, VscArchive, VscAccount, VscSettingsGear, VscBriefcase } from 'react-icons/vsc'
 
