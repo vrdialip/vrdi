@@ -1,5 +1,5 @@
 import React from "react";
-import "./Skills.css";
+import "./skills.css";
 
 const logos = [
   "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
