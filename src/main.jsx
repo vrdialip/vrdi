@@ -9,7 +9,6 @@ import About from "./component/About";
 import Projects from './component/project.jsx'
 import Contact from './component/contact.jsx'
 import Copyright from './component/copyright.jsx'
-import { motion } from "framer-motion"
 import Dock from '../ReactBits/Dock/Dock.jsx'
 import { VscHome, VscArchive, VscAccount, VscSettingsGear, VscBriefcase } from 'react-icons/vsc'
 
@@ -51,7 +50,7 @@ createRoot(document.getElementById('root')).render(
         left: 0,
         width: '100%',
         height: '100%',
-        zIndex: 0,   // biar tetap di belakang tapi masih bisa di-hover
+        zIndex: 0,
       }}>
         <Particles
           particleColors={['#ffffff', '#ffffff']}
@@ -76,7 +75,7 @@ createRoot(document.getElementById('root')).render(
     </div>
 
     <div className="content-layer">
-        {/* Floating Dock */}
+      {/* Floating Dock */}
       <div style={{ position: 'fixed', bottom: 0, left: 0, width: '100%', zIndex: 9999 }}>
         <Dock 
           items={items}
@@ -87,22 +86,13 @@ createRoot(document.getElementById('root')).render(
       </div>
 
       {/* Page Section */}
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 2 }}
-      >
+      <div>
         <Page />
-      </motion.div>
+      </div>
 
-
-      {/* ✅ About Section */}
-      <motion.div
+      {/* About Section */}
+      <div
         id="about"
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 2 }}
         style={{
           display: "flex",
           justifyContent: "center",
@@ -113,44 +103,26 @@ createRoot(document.getElementById('root')).render(
         }}
       >
         <About />
-      </motion.div>
+      </div>
 
       <div>
         <Skil />
       </div>
 
       {/* Projects */}
-      <motion.div
-        id="projects"
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 2 }}
-      >
+      <div id="projects">
         <Projects />
-      </motion.div>
+      </div>
 
       {/* Contact */}
-      <motion.div
-        id="contact"
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 2 }}
-      >
+      <div id="contact">
         <Contact />
-      </motion.div>
+      </div>
 
       {/* Copyright */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 2 }}
-        style={{ width: '100%', margin: 0 }}
-      >
+      <div style={{ width: '100%', margin: 0 }}>
         <Copyright />
-      </motion.div>
+      </div>
     </div>
   </StrictMode>,
 )
