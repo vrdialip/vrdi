@@ -5,6 +5,9 @@ import { Children, cloneElement, useEffect, useMemo, useRef, useState } from 're
 
 import './Dock.css';
 
+import { Link } from "react-scroll";
+
+
 function DockItem({ children, className = '', onClick, mouseX, spring, distance, magnification, baseItemSize }) {
   const ref = useRef(null);
   const isHovered = useMotionValue(0);

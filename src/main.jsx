@@ -42,28 +42,29 @@ const items = [
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <div className="bg-layer">
+    {/* <div className="bg-layer"> */}
       {/* Background Particles */}
-      <div style={{ 
-        position: 'fixed',
-        top: 0,
-        left: 0,
-        width: '100%',
-        height: '100%',
-        zIndex: 0,
-      }}>
-        <Particles
-          particleColors={['#ffffff', '#ffffff']}
-          particleCount={200}
-          particleSpread={10}
-          speed={0.1}
-          particleBaseSize={100}
-          moveParticlesOnHover={true}
-          alphaParticles={false}
-          disableRotation={false}
-        />
-      </div>
-    </div>
+        <div style={{ 
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          zIndex: 0,
+          pointerEvents: "none",
+        }}>
+          <Particles
+            particleColors={['#ffffff', '#ffffff']}
+            particleCount={200}
+            particleSpread={10}
+            speed={0.1}
+            particleBaseSize={100}
+            moveParticlesOnHover={true}
+            alphaParticles={false}
+            disableRotation={false}
+          />
+        </div>
+    {/* </div> */}
 
     <div style={{ position: 'fixed', bottom: 0, left: 0, width: '100vw', zIndex: 9999 }}>
       <Dock 
@@ -74,7 +75,7 @@ createRoot(document.getElementById('root')).render(
       />
     </div>
 
-    <div className="content-layer">
+    {/* <div className="content-layer"> */}
       {/* Floating Dock */}
       <div style={{ position: 'fixed', bottom: 0, left: 0, width: '100%', zIndex: 9999 }}>
         <Dock 
@@ -123,6 +124,6 @@ createRoot(document.getElementById('root')).render(
       <div style={{ width: '100%', margin: 0 }}>
         <Copyright />
       </div>
-    </div>
+    {/* </div> */}
   </StrictMode>,
 )

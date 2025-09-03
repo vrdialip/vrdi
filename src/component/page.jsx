@@ -1,6 +1,9 @@
 import React from "react";
 import "./page.css";
 
+import { Link } from "react-scroll";
+
+
 export default function Hero() {
   return (
     <section id="home" className="homepage fade-in">
