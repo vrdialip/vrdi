@@ -31,12 +31,12 @@ const items = [
   {
     icon: <VscBriefcase size={24} color="#FFDD33" />,
     label: 'Projects',
-    onClick: () => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })
+    onClick: () => document.getElementById('project')?.scrollIntoView({ behavior: 'smooth' })
   },
   {
     icon: <VscArchive size={24} color="#FFDD33" />,
     label: 'Contact',
-    onClick: () => document.getElementById('contacts')?.scrollIntoView({ behavior: 'smooth' })
+    onClick: () => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
   }
 ]
 
