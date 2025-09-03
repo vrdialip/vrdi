@@ -12,33 +12,6 @@ import Copyright from './component/copyright.jsx'
 import Dock from '../ReactBits/Dock/Dock.jsx'
 import { VscHome, VscArchive, VscAccount, VscSettingsGear, VscBriefcase } from 'react-icons/vsc'
 
-const items = [
-  {
-    icon: <VscHome size={24} color="#FFDD33" />,
-    label: 'Home',
-    onClick: () => document.getElementById('home')?.scrollIntoView({ behavior: 'smooth' })
-  },
-  {
-    icon: <VscAccount size={24} color="#FFDD33" />,
-    label: 'About',
-    onClick: () => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })
-  },
-  {
-    icon: <VscSettingsGear size={24} color="#FFDD33" />,
-    label: 'Skills',
-    onClick: () => document.getElementById('skills')?.scrollIntoView({ behavior: 'smooth' })
-  },
-  {
-    icon: <VscBriefcase size={24} color="#FFDD33" />,
-    label: 'Projects',
-    onClick: () => document.getElementById('project')?.scrollIntoView({ behavior: 'smooth' })
-  },
-  {
-    icon: <VscArchive size={24} color="#FFDD33" />,
-    label: 'Contact',
-    onClick: () => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
-  }
-]
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
